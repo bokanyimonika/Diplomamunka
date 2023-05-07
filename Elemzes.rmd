@@ -292,7 +292,7 @@ auc(ROCgorbe)
 ```
 
 
-3. Túlélés elemzés (a jó státuszváltozóval)
+3. Túlélés elemzés
 ```{r}
 #Kaplan-Meier:
 #Alaptúlélés:
@@ -312,7 +312,7 @@ ggsurvplot(TulelesNem,
            legend.labs=c("Férfi", "Nő"))
 survdiff(SurvObj ~ Gender, data = UnempData) #A nem, nem szignifikáns a Mantel-Cox teszt alapján, p=0,9
 
-#Vakcina: vakcina: hiányszakma az oka, és rossz szocioökonómiai státusz
+#Vakcina:
 names(UnempData)[names(UnempData) == "Covid _vaccine"] <- "CovidVaccine"
 TulelesVakcina <- survfit(SurvObj ~ CovidVaccine, data = UnempData)
 summary(TulelesVakcina)
