@@ -346,7 +346,7 @@ sample <- sample(c(TRUE, FALSE), nrow(UnempData), replace=TRUE, prob=c(0.8,0.2))
 train2  <- UnempData[sample, ]
 test2   <- UnempData[!sample, ]
 
-#Laci:
+#Modell:
 CR <- coxph(Surv(UnempTimeInWeeks,Unemp01==1)~BirthYear+Health+FinancialSituation+Lung_disease+RepAidFriendsRelatives+Neckfarc+Heartattack+Diabetes+Tumor+Lung_disease+VoluntaryWork+GoodThings+Other_problem+CovidVaccine+Medicine+InternetConnection+HelpFromChindren+HelpFromRelatives+HelpFromFriends+HelpFromFriends+Gender+RepCountHLMonthyIncome+RepLowestWorkingHours+RepHighestWorkingHours, data=train2)
 summary(CR)
 
