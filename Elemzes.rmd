@@ -630,8 +630,8 @@ mean(EX_hetikisebb) #első csoport átlagos kifizetés
 EX_hetinagyobb <- heti_nagyobb*EX
 mean(EX_hetinagyobb) #második csoport átlagos kifizetés
 
-kar_1fo_K <- sum(EX_hetikisebb)/1098
-kar_1fo_nagy <- sum(EX_hetinagyobb)/1098
+kar_1fo_K <- sum(EX_hetikisebb)/1098 #98174.5
+kar_1fo_nagy <- sum(EX_hetinagyobb)/1098 #229073.8
 
 #ha nagyobb a bizt. összeg, a díj is nagyobb
 100000/kar_1fo_K #1.018594
